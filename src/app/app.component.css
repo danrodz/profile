@@ -1,4 +1,8 @@
 div {
   height: 100%;
-  background-color: #212121;
+  background-color: #121212;
+}
+* {
+  background-color: #121212;
+  color: #fff;
 }

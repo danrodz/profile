@@ -1,3 +1,37 @@
 mat-toolbar {
   overflow: hidden;
+  background-color: #1d1d1d;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  border-bottom: 3px groove #c2185b;
+}
+
+* {
+  font-family: HelveticaNeueCyrUltraLight, serif;
+  letter-spacing: 0.1rem;
+}
+
+.path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 10;
+  animation: dash 12s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+a {
+  margin-left: 10px;
+}
+
+a .icon {
+  padding: 5px 0;
+}
+
+.spacer {
+  flex: 1 1 auto;
 }

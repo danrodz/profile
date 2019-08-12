@@ -1,1 +1,69 @@
-<p>contact works!</p>
+<mat-card>
+  <mat-card-title>Contact</mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <div [formGroup]="formGroup">
+      <mat-form-field color="primary">
+        <input
+          matInput
+          type="text"
+          name="name"
+          formControlName="name"
+          placeholder="Name"
+          required
+        />
+        <mat-error *ngIf="showValidationError('name')">
+          Name is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field color="primary">
+        <input
+          matInput
+          type="text"
+          name="email"
+          formControlName="email"
+          placeholder="Email"
+          required
+        />
+        <mat-error *ngIf="showValidationError('email')">
+          {{ this.formGroup.get('email').value === ''
+            ? 'Email is required.'
+            : 'Enter a valid email address' }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field color="primary">
+        <input
+          matInput
+          type="textarea"
+          name="message"
+          formControlName="message"
+          placeholder="Message"
+          required
+        />
+        <mat-error *ngIf="showValidationError('message')">
+          Message is required.
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="dialog-controls">
+      <button
+        mat-stroked-button
+        color="accent"
+        [disabled]="false"
+      >
+        RESET
+      </button>
+      <button
+        mat-stroked-button
+        type="submit"
+        color="primary"
+        (click)="saveForm()"
+        [disabled]="false"
+      >
+        SEND MESSAGE
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>

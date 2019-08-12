@@ -1,4 +1,12 @@
 mat-toolbar {
-  position: absolute;
   bottom: 0;
+  background-color: #1d1d1d;
+  margin-top: 40px;
+}
+
+mat-toolbar > span {
+  font-family: HelveticaNeueCyrUltraLight, serif;
+  font-size: x-small;
+  flex: 1 1 auto;
+  text-align: center;
 }

@@ -2,3 +2,8 @@
   font-family: HelveticaNeueCyrUltraLight;
   src: url('/assets/fonts/helveticaneuecyr-ultralight.otf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Operator Mono Extra Light Italic';
+  src: url('/assets/fonts/Operator Mono XLight Italic.otf') format('truetype');
+}
